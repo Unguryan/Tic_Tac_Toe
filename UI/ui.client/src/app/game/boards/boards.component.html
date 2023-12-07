@@ -1,0 +1,22 @@
+<div class="" style="width: 50%">
+    <!-- <div *ngFor="let row of boards" class="row">
+        <div *ngFor="let cell of row" class="col border border-1 border-black">
+            <app-cells class="cell "></app-cells>
+        </div>
+    </div> -->
+    <div *ngFor="let row of boards" class="d-inline-flex flex-row border border-1 ">
+        <div *ngFor="let cell of row" class="d-flex flex-column border border-1 border-black " style="margin-right: 1px;">
+            <app-cells-readonly class="cell" 
+            [class.selectedBorder]="cell.selected"
+            [class.white]="cell.winner == 1"
+            [class.black]="cell.winner == 2"
+            [class.draw]="cell.winner == 3"
+
+             [cells]="cell.cells" (click)="SelectBoard(cell)"></app-cells-readonly>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</div>

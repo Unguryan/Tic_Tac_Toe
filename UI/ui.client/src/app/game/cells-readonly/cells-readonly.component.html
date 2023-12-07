@@ -1,0 +1,11 @@
+<div class="container text-center ">
+    <div *ngFor="let row of cells" class="row" style="height: 50px;">
+        <div *ngFor="let cell of row" class="col border border-1 border-black">
+            <div style="height: 100%; margin-top: 10px;">
+                <div *ngIf="cell.value == null" style="background-color: rgb(225, 224, 224); border-radius: 2px;">e</div>
+                <div *ngIf="cell.value == 1" style="background-color: rgb(149, 149, 255); border-radius: 2px;">X</div>
+                <div *ngIf="cell.value == 2" style="background-color: rgb(165, 240, 138); border-radius: 2px;">O</div>
+            </div>
+        </div>
+    </div>
+</div>

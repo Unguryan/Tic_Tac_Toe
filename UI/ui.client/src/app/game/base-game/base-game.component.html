@@ -1,0 +1,7 @@
+<div *ngIf="id == null">
+    <app-start (gameIdEvent)="GameCreatedHandler($event)"></app-start>
+</div>
+
+<div>
+    <app-active #active></app-active>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div *ngIf="game != null && game?.winner == null"  class="d-flex mb-2">
+        <h3>TO MOVE:</h3>
+        <div class="btn mx-2" *ngIf="game?.playerToMove == 1" style="background-color: rgb(149, 149, 255); border-radius: 2px;">X</div>
+        <div class="btn mx-2" *ngIf="game?.playerToMove == 2" style="background-color: rgb(165, 240, 138); border-radius: 2px;">O</div>
+    </div>
+
+    <div *ngIf="game != null && game?.winner != null" class="d-flex ">
+        <h3>WINNER:</h3>
+        <div class="btn mx-2" *ngIf="game?.winner == 1" style="background-color: rgb(149, 149, 255); border-radius: 2px;">X</div>
+        <div class="btn mx-2" *ngIf="game?.winner == 2" style="background-color: rgb(165, 240, 138); border-radius: 2px;">O</div>
+        <div class="btn mx-2" *ngIf="game?.winner == 3" style="background-color: rgb(154, 154, 154); border-radius: 2px;">Draw</div>
+    </div>
+
+    <div *ngIf="game != null && game?.winner != null">
+        <button class="btn btn-outline-success my-2 " (click)="StartNew()">Start New Game!</button>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <app-boards [boards]="game?.boards" [coords]="game?.boardToPlay" (boardSelected)="BoardSelectedHanlder($event)"></app-boards>
+        </div>
+        <div class="col">
+            <app-board [board]="selectedBoard" (boardCellSelected)="BoardCellSelectedHandler($event)"></app-board>
+        </div>
+    </div>
+</div>

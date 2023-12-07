@@ -1,0 +1,28 @@
+.cell{
+    width: 150px;
+    height: 150px;
+}
+
+.selectedBorder{
+    border: 3px rgb(13, 95, 13) solid;
+    border-radius: 3px;
+    background-color: rgb(192, 255, 96);
+}
+
+.white{
+    border: 3px rgb(80, 80, 143) solid;
+    border-radius: 3px;
+    background-color: rgb(193, 193, 255);
+}
+
+.black{
+    border: 3px rgb(85, 123, 72) solid;
+    border-radius: 3px;
+    background-color: rgb(203, 255, 184);
+}
+
+.draw{
+    border: 3px rgb(164, 113, 113) solid;
+    border-radius: 3px;
+    background-color: rgb(255, 218, 218);
+}
